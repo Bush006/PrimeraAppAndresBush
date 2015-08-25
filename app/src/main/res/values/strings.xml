@@ -3,9 +3,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="OtrosBotones">"???"</string>
-    <string name="String">Jugando...</string>
+    <string name="String">Jugando</string>
     <string name="String2">0</string>
     <string name="String3">0</string>
     <string name="Mensaje">Undiste el mismo boton 2 veces.</string>
+    <string name="title_activity_historial">Historial</string>
 
 </resources>
