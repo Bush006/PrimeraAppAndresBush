@@ -98,6 +98,8 @@ public class MainActivity extends ActionBarActivity {
         mySound.start();
         SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         Integer numeroj = SP.getInt("nj", 0);
+        Integer mayorp = SP.getInt("mp", 0);
+
 
         b=(Button) view ;
         Actual = b.getId();
@@ -139,6 +141,10 @@ public class MainActivity extends ActionBarActivity {
                     if(Objects.equals(Parejas, 10)){
                         TextView text3=(TextView)findViewById(R.id.textView4);
                         text3.setText("Ganaste !!!!");
+                        if(Intentos<10){
+                            if(mayorp<100-Intentos*10 )
+                            mayorp = 100-Intentos*10;
+                        }
                         numeroj = numeroj+1;
                     }
                 }
@@ -150,6 +156,7 @@ public class MainActivity extends ActionBarActivity {
 
         SharedPreferences.Editor editor = SP.edit();
         editor.putInt("nj", numeroj);
+        editor.putInt("mp", mayorp);
         editor.commit();
 
     }
